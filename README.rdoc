@@ -1,2 +1,3 @@
 == DIY Currriculum
 
+Nina can haz github workflow
