@@ -8,12 +8,22 @@ Course at a Glance [reviews//views//enrollments//upvotes//hours per section] -->
 
 <div class="row">
   <div class="small-9 small-centered columns">
-    <a href="#" data-reveal-id="edit-course">
-      <h3 class="page-title" ><%= @course.title %><h3>
+    <br><br>
       <div class="course_cat_img"><%= image_tag(@course.category.img)%></div>
-    </a>
-      <p><%= @course.description%><p>
+
+        <% if @current_user == @author %>
+          <a href="#" data-reveal-id="edit-course">
+          <h3 id="course_heading" ><%= @course.title %><h3></a>
+        <% else %>
+          <h3 id="course_heading2" ><%= @course.title %><h3>
+        <% end %>
+
+      <p id="course_description"><%= @course.description%><p>
     <%= render "edit"%>
+
+      <div class="small-9 small-centered columns">
+        <p id="course_by">By: <%= @author.name %></p>
+      </div>
 
       <% if @enrolled %>
       <div id="toggles">
@@ -29,39 +39,24 @@ Course at a Glance [reviews//views//enrollments//upvotes//hours per section] -->
   </div>
 </div>
 
-<div class="row">
-  <div class="small-9 small-centered columns">
-    <p>Created by: <%= @author.name %></p>
-  </div>
-</div>
   
 <div class="row">
   <div class="small-9 small-centered columns">
 
     <div class="row">    
       <div class="small-4 small columns">
-        <h3>Sections<h3>
+        <h4>Sections<h4>
         <% @course.sections.each do |s| %>
           <a href="/courses/<%= @course.id%>/sections/<%= s.id%>">
-            <h5><%= s.title %></h5>
+            <p id="indent_title"><%= s.title %></p>
           </a>
         <% end %>
       </div>
 
       <div class="small-5 small columns">
         <h4>Course at a Glance</h4>
-        <h5>Category: <%= @course.category.name %></h5> 
-        <h5># of Sections: <%= @course.sections.count %></h5>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="small-9 columns">
-        <%= link_to "Delete Course", course_path, method: :delete %>
-      ---------------------------</br>
-      Needs to add reviews
-      </div>
-    </div>
+        <p class="glance">Category: <%= @course.category.name %></p> 
+        <p class="glance"># of Sections: <%= @course.sections.count %></p>
 
   </div>
 </div>
@@ -71,7 +66,27 @@ Course at a Glance [reviews//views//enrollments//upvotes//hours per section] -->
 text-align: center;  
 }
 
+#toggles{
+text-align: center;
+}
+
 .course_cat_img img{
 width:70px; 
 }
+
+.glance{
+color:grey;
+line-height: 100%;
+}
+
+.row .row {
+background: white;
+padding-left: 70px;
+padding-right: 70px;
+padding-top: 40px;
+padding-bottom: 20px;
+margin-bottom: 50px;
+}
+
+
 </style>

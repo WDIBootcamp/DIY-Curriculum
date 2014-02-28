@@ -1,4 +1,4 @@
-<h1 class="page-title">Browse Courses by Category<h1>
+<h2 id="browse_title">Browse Courses by Category<h2>
 <h3 id="cat_name_to">* * * * *</h3>
 
 <!--  @a, @b, and @c hold arrays of all cats divided into three -->
@@ -50,13 +50,13 @@
 <div class="tabs-content">
  <% @all_cats.each do |i| %>
   <div class="content" id="panel2-<%=i.id%>">
-    <h3><%= i.name %></h3>
+    <h3 class="tab_browse_title"><%= i.name %></h3>
     <div class="small-9 small-centered columns">
        <% cat_courses = @all_courses.where(category_id: i) %>
         <ol>
           <% cat_courses.each do |course| %>
           <li class="browse_list"><a href="/courses/<%= course.id%>">
-          <h4><%= course.title %></h4></a>
+          <h4 id="course_title"><%= course.title %></h4></a>
           <p><%= course.description %></p></li>
           <% end %>
         </ol>
@@ -64,8 +64,36 @@
   </div>
   <% end %>
 
-<script>
+<style>
 
+body > div.tabs-content {
+background: white;
+}
+
+.tabs-content {
+padding-left: 50px;
+padding-right: 50px;
+}
+
+.tabs-content > .content {
+display: none;
+float: none;
+}
+
+.large-8 columns,
+.small-9 small-centered columns,
+.cat_image, 
+#cat_name_to{
+text-align: center;
+}
+
+</style>
+
+
+
+
+
+<script>
 $(".cat_holder")
   .mouseover(function() {
     var this_text = $(this).text();
@@ -80,5 +108,4 @@ $(".cat_holder")
   .on("click", function() {
  window.scroll(0, 300);
 });
-
 </script>

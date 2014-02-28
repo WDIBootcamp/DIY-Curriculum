@@ -48,13 +48,6 @@ margin-right: auto;
 max-width: initial; 
 }
 
-.large-8 columns,
-.small-9 small-centered columns,
-.cat_image, 
-#cat_name_to{
-text-align: center;
-}
-
 #cat_name_to{
 margin-top: -10px;
 margin-bottom: 25px;
@@ -90,22 +83,68 @@ margin-right: 10%;
 text-align: center;
 }
 
-.tabs-content {
-padding-left: 50px;
-padding-right: 50px;
-}
-
-.tabs-content > .content {
-display: none;
-float: none;
-}
-
 .browse_list {
 text-align: initial;
 }
+
+#course_title{
+color: rgb(43, 148, 182);
+}
+
+#course_title:hover{
+color: lightblue;
+}
+
+#browse_title {
+text-align: center;
+margin-top:50px;
+}
+
+.tab_browse_title{
+margin-top:50px;
+}
+
 
 /// end browse_all ///
 
 .remove-sideways-scroll {
   width: 100%
 }
+
+//// start course show ///
+
+#course_heading{
+color: rgb(43, 148, 182);
+text-align:center;
+}
+
+#course_heading2{
+text-align:center;
+}
+
+#course_description{
+text-align:center;
+}
+
+#course_heading:hover{
+color:lightblue;
+text-align:center;
+}
+
+#course_by{
+text-align: center;
+margin-top: -10px;
+font-style: italic;
+}
+
+#indent_title {
+color: rgb(43, 148, 182);
+line-height: 100%;
+}
+
+#indent_title:hover {
+color: lightblue;
+}
+
+
+

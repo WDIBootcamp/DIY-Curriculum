@@ -64,16 +64,15 @@ before_filter :authenticate_user!, except: [:index, :show]
     redirect_to edit_course_section_path(@course,@section)
   end
 
-
-  def sorted
-    course = Course.find(params[:course_id])
-    sections = course.sections
-    sections.each do |section|
-    section.position = params['section'].index(section.position.to_s) + 1
-    section.save
-    end
-    render :nothing => true
-  end
+  # def sorted
+  #   course = Course.find(params[:course_id])
+  #   sections = course.sections
+  #   sections.each do |section|
+  #   section.position = params['section'].index(section.position.to_s) + 1
+  #   section.save
+  #   end
+  #   render :nothing => true
+  # end
 
 
   def destroy
