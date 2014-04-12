@@ -73,6 +73,7 @@ color: black;
   width: 100%;
 }
 
+
 ///////////////////////////////////
 /////////////////////////BROWSE-ALL
 ///////////////////////////////////
@@ -80,8 +81,8 @@ color: black;
 .row_browse {
 width: 80%;
 margin-left: auto;
-margin-right: auto; 
-max-width: initial; 
+margin-right: auto;
+max-width: initial;
 }
 
 #cat_name_to{
@@ -198,4 +199,24 @@ color: lightblue;
 
 .hidden {
   display: none;
+}
+
+.blocks {
+background: white;
+padding: 10px 70px 20px 70px;
+margin-top: 50px;
+box-shadow: rgba(0,0,0,.08) 0 1px 5px;
+}
+
+
+@media (max-width: 768px) {
+
+  .card-title {
+    padding: 10px 10px 20px 10px;
+  }
+
+  .blocks {
+    padding: 10px 10px 10px 10px;
+  }
+
 }
