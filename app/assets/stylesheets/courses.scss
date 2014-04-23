@@ -44,6 +44,11 @@ $light-green-blue: rgba(139, 212, 207, 1);
   margin-bottom: 50px;
 }
 
+#course-tabs{
+  dd a{
+    text-align: center;
+  }
+}
 
 .add-course {
   margin-top: 20px;
@@ -80,8 +85,8 @@ color: black;
 .row_browse {
 width: 80%;
 margin-left: auto;
-margin-right: auto; 
-max-width: initial; 
+margin-right: auto;
+max-width: initial;
 }
 
 #cat_name_to{
