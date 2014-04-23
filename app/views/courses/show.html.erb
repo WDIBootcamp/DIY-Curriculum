@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="small-6 small-centered columns blocks">
+  <div class="small-11 medium-9 large-6 small-centered columns blocks">
     <br><br>
       <div class="course_cat_img"><%= image_tag(@course.category.img)%></div>
 
@@ -31,13 +31,13 @@
   </div>
 </div>
 
-  
-<div class="row">
-  <div class="small-6 small-centered columns">
 
-    <div class="row">    
+<div class="row">
+  <div class="small-11 medium-9 large-6 small-centered columns">
+
+    <div class="row">
       <div class="small-5 small columns top-margin">
-        <div class="row card-title">  
+        <div class="row card-title">
         <h4>Sections<h4>
         </div>
         <div class="row blocks">
@@ -55,7 +55,7 @@
         </div>
 
         <div class="row blocks">
-          <p class="glance">Category: <%= @course.category.name %></p> 
+          <p class="glance">Category: <%= @course.category.name %></p>
           <p class="glance"><%= @course.sections.count %> Sections</p>
           <a href="#" data-reveal-id="enrollments">
             <p class="glance"><%= @course.users.count %> Enrollments</p>
@@ -69,7 +69,7 @@
 
 <style>
 .course_cat_img{
-text-align: center;  
+text-align: center;
 }
 
 #toggles{
@@ -77,7 +77,7 @@ text-align: center;
 }
 
 .course_cat_img img{
-width:70px; 
+width:70px;
 }
 
 .glance{
