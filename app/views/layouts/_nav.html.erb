@@ -12,11 +12,11 @@
       <ul class="left">
         <li class="divider"></li>
         <li>
-            <%= link_to courses_path do%> 
+            <%= link_to courses_path do%>
                 <i class="fi-book-bookmark"></i>
-                <span class="courses-nav">Courses<span>
-            <% end %>    
-        </li> 
+                <span class="courses-nav"> My Courses<span>
+            <% end %>
+        </li>
       </ul>
       <%end%>
     <% if not @index_page %>
@@ -34,12 +34,12 @@
             <a href="/browse"><i class="fi-magnifying-glass"></i></a>
         </li>
         <li class="divider"></li>
-        <% if !signed_in? %>    
+        <% if !signed_in? %>
         <li><%= link_to "Sign In", user_session_path %></li>
         <%end%>
         <% if signed_in? %>
             <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
-        <%else%>    
+        <%else%>
             <li class="divider"></li>
             <li><%= link_to "Sign up", new_user_registration_path %></li>
         <%end%>
