@@ -44,6 +44,11 @@ $light-green-blue: rgba(139, 212, 207, 1);
   margin-bottom: 50px;
 }
 
+#course-tabs{
+  dd a{
+    text-align: center;
+  }
+}
 
 .add-course {
   margin-top: 20px;
@@ -147,6 +152,12 @@ margin-top:50px;
 ////////////////////////COURSE SHOW
 ///////////////////////////////////
 
+.row .blocks {
+  padding: 10px 70px 20px 30px;
+
+}
+
+
 #course_heading{
 color: rgb(43, 148, 182);
 text-align:center;
@@ -185,7 +196,7 @@ color: lightblue;
 
 .card-title {
   background-color: $light-green-blue;
-  padding: 10px 70px 20px 70px;
+  padding: 10px 70px 20px 30px;
   color: white;
 }
 
