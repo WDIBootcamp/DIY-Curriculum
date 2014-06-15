@@ -39,19 +39,28 @@ body, html {
   color: black;
 }
 
+.logo .small-logo{
+  display: none;
+}
+
 .logo > a > img {
   height: 42px;
 }
 
 
 .logo {
-  display: table; 
+  display: table;
   padding-left: 35%
 }
 
 .logo {
   @media only screen { padding-left: 15% }
+  @media only screen and (min-width: 20.063em) {  padding-left: 16% }
   @media only screen and (min-width: 40.063em) {  padding-left: 19% }
+  @media only screen and (min-width: 50.063em) {  padding-left: 24% }
+  @media only screen and (min-width: 54.063em) {  padding-left: 24% }
+  @media only screen and (min-width: 57.063em) { padding-left: 28% }
+  @media only screen and (min-width: 60.063em) { padding-left: 32% }
   @media only screen and (min-width: 64.063em) { padding-left: 35% }
 }
 
@@ -99,3 +108,22 @@ body > nav > section > ul.left > li:nth-child(2) > a {
   background: #fff;
 }
 
+@media only screen and (max-width: 40em) {
+  .logo .big-logo {
+    display: none;
+  }
+  .logo .small-logo {
+    display: table;
+  }
+  .logo {
+    @media only screen and (min-width: 24.063em) {  padding-left: 1% }
+    @media only screen and (min-width: 26.063em) {  padding-left: 5% }
+    @media only screen and (min-width: 28.063em) {  padding-left: 19% }
+    @media only screen and (min-width: 30.063em) {  padding-left: 20% }
+    @media only screen and (min-width: 32.063em) {  padding-left: 27% }
+    @media only screen and (min-width: 34.063em) {  padding-left: 35% }
+    @media only screen and (min-width: 36.063em) {  padding-left: 37% }
+    @media only screen and (min-width: 38.063em) {  padding-left: 38% }
+  }
+
+}
