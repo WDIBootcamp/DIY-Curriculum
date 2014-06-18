@@ -20,7 +20,7 @@ with online resources<br>
     create
     <%end%>
   </div>
- 
+
     <div class="box">
       <a href="/browse"><%= image_tag("magnifying-glass_128.png")%></a>
       browse
@@ -84,15 +84,3 @@ margin-top: 30px;
 }
 
 </style>
-
-<script>
-$(".toggle_button").click(function(){
-  $('#index_partial').toggle('medium');
-    if ($(".toggle_button").text() === "(see example)") {
-      $(".toggle_button").text("(close example)");
-    }
-    else 
-      $(".toggle_button").text("(see example)");
-  }
-);
-</script>
