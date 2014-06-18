@@ -46,7 +46,26 @@
   </div>
 </div>
 
-s
+<!-- begin tabs -->
+<div class="small-12 medium-10 large-8 small-centered columns">
+<div class="tabs-content">
+ <% @all_cats.each do |i| %>
+  <div class="content" id="panel2-<%=i.id%>">
+    <h3 class="tab_browse_title"><%= i.name %></h3>
+    <div class="small-12 small-centered columns show-container">
+       <% cat_courses = @all_courses.where(category_id: i) %>
+        <ol>
+          <% cat_courses.each do |course| %>
+          <li class="browse_list"><a href="/courses/<%= course.id%>">
+          <h4 id="course_title"><%= course.title %></h4></a>
+          <p><%= course.description %></p></li>
+          <% end %>
+        </ol>
+    </div>
+  </div>
+  <% end %>
+</div>
+</div>
 
 <style>
 
