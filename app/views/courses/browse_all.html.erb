@@ -7,7 +7,7 @@
 <% i = 0 %>
   <div class="all_cats">
   <% @a.each do |f| %>
-  <% i += 1 %> 
+  <% i += 1 %>
     <div class= "cat_holder">
       <dl data-tab><dd><a href="#panel2-<%=i%>">
         <div class="cat_image"><%= image_tag(f.img)%></div>
@@ -15,7 +15,7 @@
       </a></dd></dl>
     </div>
     <%end%>
-  </div>  
+  </div>
 </div>
 
 <div class="all_cats_holder">
@@ -29,7 +29,7 @@
         </a></dd></dl>
     </div>
     <%end%>
-  </div>  
+  </div>
 </div>
 
 <div class="all_cats_holder">
@@ -43,16 +43,16 @@
         </a></dd></dl>
       </div>
     <%end%>
-  </div> 
+  </div>
 </div>
 
 <!-- begin tabs -->
-<div class="small-8 small-centered columns show-container">
+<div class="small-12 medium-10 large-8 small-centered columns">
 <div class="tabs-content">
  <% @all_cats.each do |i| %>
   <div class="content" id="panel2-<%=i.id%>">
     <h3 class="tab_browse_title"><%= i.name %></h3>
-    <div class="small-9 small-centered columns show-container">
+    <div class="small-12 small-centered columns show-container">
        <% cat_courses = @all_courses.where(category_id: i) %>
         <ol>
           <% cat_courses.each do |course| %>
@@ -70,12 +70,17 @@
 <style>
 
 body > div.tabs-content {
-background: white;
+/*background: white;*/
+}
+
+.show-container  {
+  magin: 0;
+  border: 0;
 }
 
 .tabs-content {
-padding-left: 50px;
-padding-right: 50px;
+padding-left: 15px;
+padding-right: 15px;
 }
 
 .tabs-content > .content {
@@ -85,7 +90,7 @@ float: none;
 
 .large-8 columns,
 .small-9 small-centered columns,
-.cat_image, 
+.cat_image,
 #cat_name_to{
 text-align: center;
 }

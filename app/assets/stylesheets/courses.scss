@@ -144,6 +144,30 @@ margin-top:50px;
 
 .tab_browse_title{
 margin-top:50px;
+text-align: center;
+}
+
+.browse-page{
+  body > div.tabs-content {
+  background: white;
+  }
+
+  .tabs-content {
+  padding-left: 50px;
+  padding-right: 50px;
+  }
+
+  .tabs-content > .content {
+  display: none;
+  float: none;
+  }
+
+  .large-8 columns,
+  .small-9 small-centered columns,
+  .cat_image,
+  #cat_name_to{
+  text-align: center;
+  }
 }
 
 
